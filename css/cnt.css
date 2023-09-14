@@ -115,6 +115,7 @@
     max-width: 80%; /* Ensure the image fits within the container */
     transform: scale(1);
     margin: 15px;
+    padding-left:10px;
   }
   
   .social-card .social-link:hover {
@@ -140,27 +141,5 @@
     }
   }
 
-/* Existing styles */
 
-/* Add a media query for screens with a maximum width of 768px (adjust as needed) */
-@media (max-width: 768px) {
-    .social-card {
-        /* Adjust the width and height of the social cards for mobile */
-        width: 100%;
-        height: auto;
-    }
-
-    .social-card .social-link {
-        /* Adjust the width of the social links for mobile */
-        width: 100%;
-        height: auto;
-    }
-
-    .social-card .social-link img {
-        /* Adjust the maximum height and width of the icons for mobile */
-        max-height: 50px; /* Adjust the value as needed */
-        max-width: 50px; /* Adjust the value as needed */
-        margin: 10px; /* Adjust the spacing between icons for mobile */
-    }
-}
 
