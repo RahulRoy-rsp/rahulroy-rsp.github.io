@@ -111,10 +111,10 @@
   
   .social-card .social-link img {
     text-shadow: 1px 1px #B721FF;
-    max-height: 90%; /* Ensure the image fits within the container */
-    max-width: 90%; /* Ensure the image fits within the container */
+    max-height: 80%; /* Ensure the image fits within the container */
+    max-width: 80%; /* Ensure the image fits within the container */
     transform: scale(1);
-    margin: 10px;
+    margin: 15px;
   }
   
   .social-card .social-link:hover {
