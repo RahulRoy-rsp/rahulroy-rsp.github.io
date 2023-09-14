@@ -1,0 +1,176 @@
+.about-{
+    background: #12192c;
+    /*height: 100vh;*/
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2rem;
+    text-align: center;
+    color:#fff
+}
+.about- h1{
+    font-size: 5rem;
+    text-transform: uppercase;
+    /* font-family: 'Merriweather', serif; */
+    margin-top: -100px;
+}
+
+#encon {
+    height: 20px;
+    margin-bottom: 10px;
+}
+
+.about- h1 span{
+    color: #B721FF;
+}
+.about- h2{
+    font-weight: 600;
+    color: #B721FF;
+}
+.about-btns{
+    display: flex;
+    margin: 2rem 0;
+}
+.btn{
+    border: none;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    padding: 0.55rem 0;
+    width: 130px;
+    font-weight: 600;
+    background: transparent;
+    margin: 0 0.5rem;
+    cursor: pointer;
+    color:#fff
+}
+.btn.btn-pink{
+    background: #B721FF;
+    color: #fff;
+    border-color: #B721FF;
+    transition: all 0.5s ease-in-out;
+}
+.btn.btn-pink:hover{
+    background: transparent;
+    border-color: #fff;
+    color: #fff;
+}
+
+.about-para p{
+    font-weight: 300;
+    padding: 0.5rem;
+    opacity: 1;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    padding-bottom: 0px;
+    padding-top: 2px;
+}
+
+@media screen and (min-width: 720px){
+
+}
+
+.spot-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding-top: 10px;
+}
+
+.spot-button {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    width: 50px;
+    height: 50px;
+    text-decoration: none;
+    border-radius: 100%;
+    background: #fff;
+    text-align: center;
+}
+
+.spot-button::after {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: 50%;
+    display: block;
+    width: 0;
+    height: 0;
+    border-radius: 100%;
+    transition: 0.3s;
+}
+
+.spot-button:focus, .spot-button:hover {
+    color: #12192c;
+    transform: scale(1.2);
+}
+
+.spot-button:focus::after, .spot-button:hover::after {
+    width: calc(100% + 2px);
+    height: calc(100% + 2px);
+    margin-left: calc(-50% - 1px);
+}
+
+.spot-button i, .spot-button svg {
+    position: relative;
+    z-index: 1;
+    transition: 0.1s;
+}
+
+.spot-button i {
+    font-size: 48.6px;
+}
+
+
+.social-button--spotify {
+    color: #2C9819;
+}
+
+.social-button--spotify::after {
+    background: #B721FF;
+}
+
+
+.btn-hover {
+    width: 160px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    /* margin: 20px; */
+    height: 50px;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+
+    border-radius: 50px;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn-hover:hover {
+    background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn-hover:focus {
+    outline: none;
+}
+
+/* f24645 */
+.btn-hover.color- {
+    background-image: linear-gradient(to right, #6253e1, #852D91, #A3A1FF, #ca29b5);
+    box-shadow: 0 4px 15px 0 rgba(126, 52, 161, 0.75);
+}

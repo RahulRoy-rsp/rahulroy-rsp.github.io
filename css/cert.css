@@ -1,0 +1,173 @@
+.mySlides {display: none}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.slideshow-container h2{
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 40px;
+    color: white;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 60%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.boldie- {
+  font-weight: bold;
+  color: #B721FF;
+}
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text-container {
+  background-color: #FFB6C1;
+  color: black;
+  text-align: center;
+  padding: 20px;
+  height: 250px;
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+}
+
+.heading {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.text {
+  font-size: 16px;
+  /* margin-bottom: 20px; */
+  margin-bottom: auto;
+  font-family: 'Inclusive Sans', sans-serif;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.link {
+  font-size: 20px;
+  cursor: pointer;
+  max-width: 200px;
+  margin: 0 auto;
+  color: #B721FF;
+  display: inline-block; /* Add this property to make it inline-block and not full width */
+  padding: 10px; /* Add padding for spacing */
+  border: 2px solid #ccc; /* Add a border for a button-like appearance */
+  border-radius: 10px; /* Add rounded corners for aesthetics */
+  text-align: center; /* Center the text horizontally */
+  background-color: #f0f0f0; /* Add a background color */
+  transition: background-color 0.3s ease; /* Add a smooth background color transition on hover */
+
+}
+
+.link:hover {
+  background-color: #B721FF; /* Change background color on hover */
+  color: white;
+}
+
+
+/* Number text (1/3 etc) */
+/* .numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+} */
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size and stack vertically */
+@media only screen and (max-width: 300px) {
+  .prev, .next, .text-container {font-size: 11px}
+  .text {
+    margin-bottom: 10px;
+  }
+  .link {
+    font-size: 14px;
+  }
+}
+
+
+/* Add this media query for smaller screens */
+@media only screen and (max-width: 768px) {
+  .text-container {
+    height: auto;
+    padding: 10px; /* Add padding for spacing */
+    text-align: center; /* Justify text to prevent irregular spacing */
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .prev, .next {font-size: 11px}
+  
+  .heading {
+    font-size: 24px; /* Decrease heading font size */
+  }
+  
+  .text {
+    font-size: 14px; /* Decrease text font size */
+    margin-bottom: 10px; /* Add some margin to separate paragraphs */
+    margin-left: 0; /* Remove margin left/right */
+    margin-right: 0;
+  }
+
+  .link {
+    font-size: 16px; /* Decrease link font size */
+    max-width: none; /* Remove max-width */
+    width: auto; /* Make link full width */
+  }
+}

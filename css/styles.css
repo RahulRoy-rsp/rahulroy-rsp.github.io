@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: montserrat;
+    background-color: #12192c;
+}
+
+nav{
+    background: #B721FF;
+    height: 80px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav.sticky {
+    background: #B721FF;
+}
+
+/* Add a little transition for smooth effect */
+nav {
+    transition: background 0.3s ease-in-out;
+}
+
+label.logo{
+    color: white;
+    font-size: 24px;
+    line-height: 80px;
+    padding: 0 40px;
+    font-weight: bold;
+    font-family: 'Merriweather', serif;
+}
+
+nav ul{
+    float: right;
+    margin-right: 10px;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 2px;
+}
+
+nav ul li a{
+    color: white;
+    font-size: 17px;
+    padding: 7px 7px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-family: kanit;
+}
+
+a.active,a:hover{
+    background: #ecf00b;
+    transition: .5s;
+    color: black;
+}
+
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 50px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+@media (max-width: 980px){
+    label.logo{
+      font-size: 18px;
+      padding-left: 50px;
+}
+
+nav ul li a{
+      font-size: 16px;
+    }
+}
+
+
+@media (max-width: 980px){
+    .checkbtn{
+      display: block;
+    }
+
+    ul{
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: #12192c;
+      top: 80px;
+      left: -100%;
+      text-align: center;
+      transition: all .5s;
+    }
+
+    nav ul li{
+      display: block;
+      margin: 35px 0;
+      line-height: 30px;
+    }
+
+    nav ul li a{
+      font-size: 20px;
+    }
+
+    a:hover,a.active{
+      background: none;
+      color: #0082e6;
+    }
+
+    #check:checked ~ ul{
+      left: 0;
+    }
+
+}
+
+.gap-cont {
+    height: 100px;
+}
+
+
+@keyframes fadeInUp {
+    from {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  .fade-in-up {
+    animation: 0.75s both fadeInUp;
+  }
+
+.hed {
+  text-align: center;
+  font-size: 40px;
+  color: white;
+  margin-bottom: 20px;
+  margin-top: 30px;
+  padding-top: 25px;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+
+
+.light-up {
+  /* font-size: 24px; */
+  /* text-align: center; */
+  animation: light-up 2s linear infinite;
+  opacity: 0; /* Start with text hidden */
+  color: yellow;
+  font-weight: bolder;
+
+}
+
+@keyframes light-up {
+  0%, 100% {
+      opacity: 0;
+  }
+  50% {
+      opacity: 2;
+  }
+}

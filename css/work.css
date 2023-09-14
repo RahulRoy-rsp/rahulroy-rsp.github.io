@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@600&display=swap');
+  
+  /* Timeline Container */
+.work-timeline {
+    background: #12192c;
+    margin: 20px auto;
+    padding: 0px 40px;
+}
+
+.work-timeline h2 {
+    font-size: 40px;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+  
+  /* Card container */
+.work-card {
+    position: relative;
+    /* max-width: 400px; */
+}
+  
+  /* setting padding based on even or odd */
+.work-card:nth-child(odd) {
+    padding: 30px 0 30px 30px;
+}
+
+.work-card:nth-child(even) {
+    padding: 30px 30px 30px 0;
+}
+
+/* Global ::before */
+.work-card::before {
+    content: "";
+    position: absolute;
+    width: 50%;
+    border: solid #B721FF;
+}
+  
+  /* Setting the border of top, bottom, left */
+.work-card:nth-child(odd)::before {
+    left: 0px;
+    top: -4.5px;
+    bottom: -4.5px;
+    border-width: 5px 0 5px 5px;
+    border-radius: 50px 0 0 50px;
+}
+  
+  /* Setting the border of top, bottom, right */
+.work-card:nth-child(even)::before {
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-width: 5px 5px 5px 0;
+    border-radius: 0 50px 50px 0;
+}
+  
+  /* Removing the border if it is the first card */
+.work-card:first-child::before {
+    border-top: 0;
+    border-top-left-radius: 0;
+}
+  
+  /* Removing the border if it is the last card  and it's odd */
+.work-card:last-child:nth-child(odd)::before {
+    border-bottom: 0;
+    border-bottom-left-radius: 0;
+}
+  
+  /* Removing the border if it is the last card  and it's even */
+.work-card:last-child:nth-child(even)::before {
+    border-bottom: 0;
+    border-bottom-right-radius: 0;
+}
+  
+  /* Information about the timeline */
+.work-info {
+    display: flex;
+    flex-direction: column;
+    background: rgba(36, 153, 248, 0.863);
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    font-family: 'Geologica', sans-serif;
+    padding-bottom: 10px;
+}
+
+.work-info p {
+  text-align:justify;
+  margin: auto;
+
+}
+  /* Title of the card */
+.work-title {
+    color: #000000;
+    position: relative;
+}
+
+.work-comp,
+.work-tenure {
+    font-size: 18px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+  /* Timeline dot  */
+.work-title::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 999px;
+    border: 3px solid orangered;
+}
+  
+  /* text right if the card is even  */
+.work-card:nth-child(even) > .work-info > .work-title {
+    text-align: right;
+}
+  
+  /* setting dot to the left if the card is odd */
+.work-card:nth-child(odd) > .work-info > .work-title::before {
+    left: -45px;
+}
+  
+  /* setting dot to the right if the card is odd */
+.work-card:nth-child(even) > .work-info > .work-title::before {
+    right: -45px;
+}
+
+.work-card:nth-child(odd) > .work-info > .work-comp,
+.work-card:nth-child(odd) > .work-info > .work-tenure {
+    text-align: left;
+    /* margin-left: 45px; */
+}
+
+.work-card:nth-child(even) > .work-info > .work-comp,
+.work-card:nth-child(even) > .work-info > .work-tenure {
+    text-align: right;
+    /* margin-right: 45px; */
+}
+  
