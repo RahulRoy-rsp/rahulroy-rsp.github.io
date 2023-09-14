@@ -101,10 +101,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 25%;
+    width: 20%;
     height: 90%;
     color: #12192c;
-    font-size: 18px;
+    font-size: 14px;
     text-decoration: none;
     transition: 0.25s;
   }
