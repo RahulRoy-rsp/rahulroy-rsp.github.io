@@ -76,7 +76,7 @@ a.active,a:hover{
     color: white;
     float: right;
     line-height: 80px;
-    margin-right: 50px;
+    margin-right: 20px;
     cursor: pointer;
     display: none;
 }
@@ -87,7 +87,7 @@ a.active,a:hover{
 
 @media (max-width: 980px){
     label.logo{
-      font-size: 14px;
+      font-size: 15px;
       padding-left: 30px;
 }
 
