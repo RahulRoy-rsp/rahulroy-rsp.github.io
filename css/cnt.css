@@ -134,7 +134,30 @@
     80% {
       transform: scale(1.2);
     }
-  
+
+      .copyr {
+  margin-top: 10px;
+  color: #B721FF;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: bold;
+}
+
+.copy-up {
+  animation: copy-up 2s linear infinite;
+  opacity: 0; /* Start with text hidden */
+  color: #B721FF;
+  font-weight: bolder;
+
+}
+
+@keyframes copy-up {
+  0%, 100% {
+      opacity: 0;
+  }
+  50% {
+      opacity: 1;
+  }
+}
     100% {
       transform: scale(1);
     }
