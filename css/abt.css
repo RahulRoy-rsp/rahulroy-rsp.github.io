@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Castoro&display=swap');
+
 .about-{
     background: #12192c;
     /*height: 100vh;*/
@@ -64,7 +66,8 @@
     padding: 0.5rem;
     opacity: 1;
     font-size: 20px;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Castoro', 'Poppins', sans-serif;
+    /*font-family: 'Poppins', sans-serif;*/
     padding-bottom: 0px;
     padding-top: 2px;
 }
