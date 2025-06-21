@@ -1,0 +1,30 @@
+[
+    {
+        "degree": "Masters. Computer Science",
+        "institution": "Guru Nanak Khalsa College, Mumbai",
+        "duration": "June 2021 - June 2023",
+        "grade": "First Class",
+        "summary": "Completed with an overall CGPA of 9.83 out of 10."
+    },
+    {
+        "degree": "Bachelors. Computer Science",
+        "institution": "Guru Nanak Khalsa College, Mumbai",
+        "duration": "June 2018 - April 2021",
+        "grade": "First Class",
+        "summary": "Completed with an overall CGPA of 9.04 out of 10."
+    },
+    {
+        "degree": "HSC with Computer Science",
+        "institution": "R.D National College, Mumbai",
+        "duration": "July 2016 - April 2018",
+        "grade": "First Class",
+        "summary": "Completed with 69.85%"
+    },
+    {
+        "degree": "SSC",
+        "institution": "Royal Academy School, Mumbai",
+        "duration": "June 2006 - April 2016",
+        "grade": "First Class",
+        "summary": "Completed with 83.80%"
+    }
+]

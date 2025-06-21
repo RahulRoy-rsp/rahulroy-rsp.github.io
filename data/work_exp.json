@@ -1,0 +1,20 @@
+[
+    {
+        "position": "Software Engineer",
+        "company": "Tech Solutions Inc.",
+        "tenure": "July 2022 - Present",
+        "summary": "Developing scalable web applications using React and Node.js. Leading a team of 3 junior developers and implementing CI/CD pipelines."
+    },
+    {
+        "position": "Junior Developer",
+        "company": "Digital Innovations",
+        "tenure": "January 2021 - June 2022",
+        "summary": "Built RESTful APIs and contributed to frontend development. Participated in agile sprints and code reviews."
+    },
+    {
+        "position": "Intern",
+        "company": "StartUp Labs",
+        "tenure": "June 2020 - December 2020",
+        "summary": "Assisted in debugging and testing applications. Gained experience with version control and team collaboration tools."
+    }
+]

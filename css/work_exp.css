@@ -1,0 +1,103 @@
+/* Work Experience Section */
+.work-exp-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.work-item {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.work-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.work-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--primary), var(--accent));
+}
+
+.work-position {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--dark);
+    margin-bottom: 0.5rem;
+}
+
+.work-company {
+    font-size: 1.1rem;
+    color: var(--primary);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.work-company i {
+    font-size: 1rem;
+}
+
+.work-tenure {
+    display: inline-block;
+    background: rgba(67, 97, 238, 0.1);
+    color: var(--primary);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.work-summary {
+    color: var(--gray);
+    line-height: 1.8;
+    padding-left: 1rem;
+    border-left: 2px solid rgba(67, 97, 238, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .work-item {
+        padding: 1.5rem;
+    }
+    
+    .work-position {
+        font-size: 1.2rem;
+    }
+    
+    .work-company {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .work-item {
+        padding: 1.2rem;
+    }
+    
+    .work-position {
+        font-size: 1.1rem;
+    }
+    
+    .work-tenure {
+        font-size: 0.85rem;
+    }
+    
+    .work-summary {
+        font-size: 0.95rem;
+    }
+}
