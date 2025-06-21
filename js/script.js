@@ -76,8 +76,14 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Load academics data
     loadAcademics();
+    
     // Load work experience
     loadWorkExperience();
+
+    // Load projects
+    loadProjects();    
+    // Initialize project navigation
+    initProjectNavigation();
     
     // Add intersection observer for animations
     const observerOptions = {
@@ -218,4 +224,89 @@ function renderWorkExperience(data) {
             observer.observe(workItem);
         }
     });
+}
+
+function loadProjects() {
+    fetch('data/projects.json')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            renderProjects(data);
+        })
+        .catch(error => {
+            console.error('Error loading projects data:', error);
+            // Fallback data
+            const fallbackData = [
+                {
+                    "name": "Sample Project",
+                    "type": "Personal",
+                    "link": "",
+                    "summary": "This is an example project description."
+                }
+            ];
+            renderProjects(fallbackData);
+        });
+}
+
+function renderProjects(data) {
+    const container = document.getElementById('projects-container');
+    container.innerHTML = '';
+    
+    data.forEach((project, index) => {
+        const projectCard = document.createElement('div');
+        projectCard.className = 'project-card';
+        
+        const hasLink = project.link && project.link.trim() !== '';
+        const typeClass = project.type.toLowerCase();
+        
+        const html = `
+            <span class="project-type ${typeClass}">${project.type}</span>
+            <h3 class="project-name">${project.name}</h3>
+            <p class="project-summary">${project.summary}</p>
+            <a href="${hasLink ? project.link : '#'}" 
+               class="project-link ${hasLink ? 'active' : 'disabled'}" 
+               ${hasLink ? '' : 'tabindex="-1"'}
+               target="_blank" rel="noopener noreferrer">
+               ${hasLink ? 'View Project' : 'Not Available'}
+            </a>
+        `;
+        
+        projectCard.innerHTML = html;
+        container.appendChild(projectCard);
+        
+        // Add to intersection observer
+        if (typeof observer !== 'undefined') {
+            observer.observe(projectCard);
+        }
+    });
+}
+
+function initProjectNavigation() {
+    const container = document.getElementById('projects-container');
+    const leftNav = document.querySelector('.projects-nav.left');
+    const rightNav = document.querySelector('.projects-nav.right');
+    
+    if (!container || !leftNav || !rightNav) return;
+    
+    leftNav.addEventListener('click', () => {
+        container.scrollBy({ left: -300, behavior: 'smooth' });
+    });
+    
+    rightNav.addEventListener('click', () => {
+        container.scrollBy({ left: 300, behavior: 'smooth' });
+    });
+    
+    // Hide/show arrows based on scroll position
+    container.addEventListener('scroll', () => {
+        const { scrollLeft, scrollWidth, clientWidth } = container;
+        leftNav.style.display = scrollLeft > 0 ? 'flex' : 'none';
+        rightNav.style.display = scrollLeft < scrollWidth - clientWidth - 1 ? 'flex' : 'none';
+    });
+    
+    // Initial check
+    container.dispatchEvent(new Event('scroll'));
 }

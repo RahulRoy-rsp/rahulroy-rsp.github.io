@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Portfolio Website",
+        "type": "Personal",
+        "link": "https://example.com/portfolio",
+        "summary": "A responsive portfolio website built with HTML, CSS, and JavaScript. Features dynamic content loading and smooth animations."
+    },
+    {
+        "name": "Hazel-A-Voice-Based-Virtual-Assistant",
+        "type": "Personal",
+        "link": "https://github.com/RahulRoy-rsp/Hazel-A-Voice-Based-Virtual-Assistant",
+        "summary": "Full-stack e-commerce solution with React frontend and Node.js backend. Integrated with payment gateways and inventory management."
+    },
+    {
+        "name": "Task Management App",
+        "type": "Personal",
+        "link": "",
+        "summary": "A productivity app for managing daily tasks with drag-and-drop functionality and team collaboration features."
+    },
+    {
+        "name": "Weather Dashboard",
+        "type": "Personal",
+        "link": "https://example.com/weather",
+        "summary": "Real-time weather application using API integration with 5-day forecasts and location-based services."
+    },
+    {
+        "name": "CRM System",
+        "type": "Work",
+        "link": "https://example.com/crm",
+        "summary": "Customer relationship management system with analytics dashboard and automated reporting features."
+    }
+]
