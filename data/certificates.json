@@ -1,0 +1,26 @@
+[
+    {
+        "name": "AWS Certified Solutions Architect",
+        "summary": "Demonstrated ability to design and deploy scalable systems on AWS. Highlighted skills include cloud architecture, security, and cost optimization.",
+        "link": "https://example.com/certificates/aws",
+        "highlightWords": ["cloud architecture", "security", "cost optimization"]
+    },
+    {
+        "name": "Google Data Analytics Professional",
+        "summary": "Earned credential for data cleaning, analysis, and visualization using tools like SQL, R, and Tableau. Special focus on data-driven decision making.",
+        "link": "https://example.com/certificates/google-data",
+        "highlightWords": ["data cleaning", "analysis", "visualization", "data-driven"]
+    },
+    {
+        "name": "Microsoft Certified: Azure Administrator",
+        "summary": "Validated skills in implementing, managing, and monitoring Azure environments. Key competencies include virtual networking and identity management.",
+        "link": "https://example.com/certificates/azure",
+        "highlightWords": ["virtual networking", "identity management"]
+    },
+    {
+        "name": "Certified Scrum Master",
+        "summary": "Proven understanding of Scrum methodologies and agile project management. Focus areas include sprint planning and team collaboration.",
+        "link": "",
+        "highlightWords": ["Scrum methodologies", "agile", "sprint planning"]
+    }
+]

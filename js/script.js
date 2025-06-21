@@ -81,9 +81,14 @@ document.addEventListener('DOMContentLoaded', function() {
     loadWorkExperience();
 
     // Load projects
-    loadProjects();    
-    // Initialize project navigation
+    loadProjects();
+
+    // Load certificates
+    loadCertificates();
+
+    // Initialize navigations
     initProjectNavigation();
+    initCertificatesCarousel();
     
     // Add intersection observer for animations
     const observerOptions = {
@@ -309,4 +314,148 @@ function initProjectNavigation() {
     
     // Initial check
     container.dispatchEvent(new Event('scroll'));
+}
+
+function loadCertificates() {
+    fetch('data/certificates.json')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            renderCertificates(data);
+        })
+        .catch(error => {
+            console.error('Error loading certificates data:', error);
+            // Fallback data
+            const fallbackData = [
+                {
+                    "name": "Sample Certificate",
+                    "summary": "This is an example certificate description.",
+                    "link": "",
+                    "highlightWords": ["example", "description"]
+                }
+            ];
+            renderCertificates(fallbackData);
+        });
+}
+
+function renderCertificates(data) {
+    const container = document.getElementById('certificates-container');
+    const dotsContainer = document.getElementById('cert-dots');
+    container.innerHTML = '';
+    dotsContainer.innerHTML = '';
+    
+    data.forEach((cert, index) => {
+        // Create slide
+        const slide = document.createElement('div');
+        slide.className = 'certificate-slide';
+        slide.dataset.index = index;
+        
+        // Highlight words in summary
+        let highlightedSummary = cert.summary;
+        cert.highlightWords.forEach(word => {
+            const regex = new RegExp(word, 'gi');
+            highlightedSummary = highlightedSummary.replace(regex, 
+                `<span class="highlight">${word}</span>`);
+        });
+        
+        const hasLink = cert.link && cert.link.trim() !== '';
+        
+        slide.innerHTML = `
+            <div class="certificate-card">
+                <h3 class="certificate-name">${cert.name}</h3>
+                <p class="certificate-summary">${highlightedSummary}</p>
+                <a href="${hasLink ? cert.link : '#'}" 
+                   class="certificate-link ${hasLink ? 'active' : 'disabled'}" 
+                   ${hasLink ? '' : 'tabindex="-1"'}
+                   target="_blank" rel="noopener noreferrer">
+                   ${hasLink ? 'View Certificate' : 'Certificate Not Available'}
+                </a>
+            </div>
+        `;
+        
+        container.appendChild(slide);
+        
+        // Create dot
+        const dot = document.createElement('div');
+        dot.className = 'dot';
+        dot.dataset.index = index;
+        if (index === 0) dot.classList.add('active');
+        dotsContainer.appendChild(dot);
+    });
+}
+
+function initCertificatesCarousel() {
+    const container = document.getElementById('certificates-container');
+    const prevBtn = document.getElementById('cert-prev');
+    const nextBtn = document.getElementById('cert-next');
+    const dotsContainer = document.getElementById('cert-dots');
+    let dots = document.querySelectorAll('.dot');
+    let currentIndex = 0;
+    
+    if (!container || !prevBtn || !nextBtn) return;
+
+    // Create a function to update dots
+    const updateDots = () => {
+        dots = document.querySelectorAll('.dot'); // Refresh dots collection
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentIndex);
+        });
+    };
+
+    function updateCarousel() {
+        container.style.transform = `translateX(-${currentIndex * 100}%)`;
+        updateDots();
+        prevBtn.disabled = currentIndex === 0;
+        nextBtn.disabled = currentIndex === container.children.length - 1;
+    }
+
+    // Button click handlers
+    nextBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (currentIndex < container.children.length - 1) {
+            currentIndex++;
+            updateCarousel();
+        }
+    });
+
+    prevBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (currentIndex > 0) {
+            currentIndex--;
+            updateCarousel();
+        }
+    });
+
+    // Dot click handlers
+    dotsContainer.addEventListener('click', (e) => {
+        const dot = e.target.closest('.dot');
+        if (dot) {
+            e.stopPropagation();
+            currentIndex = parseInt(dot.dataset.index);
+            updateCarousel();
+        }
+    });
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight' && !nextBtn.disabled) {
+            e.preventDefault();
+            nextBtn.click();
+        } else if (e.key === 'ArrowLeft' && !prevBtn.disabled) {
+            e.preventDefault();
+            prevBtn.click();
+        }
+    });
+
+    // Initialize
+    updateCarousel();
+
+    // Handle window resize
+    window.addEventListener('resize', () => {
+        updateCarousel();
+    });
 }
