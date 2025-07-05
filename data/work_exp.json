@@ -1,20 +1,41 @@
 [
     {
-        "position": "Software Engineer",
-        "company": "Tech Solutions Inc.",
-        "tenure": "July 2022 - Present",
-        "summary": "Developing scalable web applications using React and Node.js. Leading a team of 3 junior developers and implementing CI/CD pipelines."
+        "position": "Data Engineer",
+        "company": "Go Digital Technology Consulting LLP",
+        "tenure": "May 2025 - Present",
+        "summary": "to fill"
     },
     {
-        "position": "Junior Developer",
-        "company": "Digital Innovations",
-        "tenure": "January 2021 - June 2022",
-        "summary": "Built RESTful APIs and contributed to frontend development. Participated in agile sprints and code reviews."
+        "position": "Associate Data Engineer",
+        "company": "Go Digital Technology Consulting LLP",
+        "tenure": "December 2023 - April 2025",
+        "summary": "to fill"
     },
     {
-        "position": "Intern",
-        "company": "StartUp Labs",
-        "tenure": "June 2020 - December 2020",
-        "summary": "Assisted in debugging and testing applications. Gained experience with version control and team collaboration tools."
+        "position": "Data Engineer Intern",
+        "company": "Go Digital Technology Consulting LLP",
+        "tenure": "October 2023 - December 2023",
+        "summary": "to fill"   
+    },
+    {
+        "position": "Python Intern",
+        "company": "Skillvertex",
+        "tenure": "February 2023 - March 2023",
+        "summary": "During this internship, I learned and upskilled Python programming with a focus on Object Oriented Programming (OOP).
+With this knowledge, I created a Text Analysis Project. In this project, I performed various tasks on textual data, like breaking it into words (tokenization), reducing words to their base form (stemming), removing common words (stop words), counting word occurrences and many more things.
+I also got introduced to the basics of Django, a web development framework.
+Using this newfound knowledge, I independently developed a Tic Tac Toe Game using the Django Framework.
+This internship enhanced my programming skills and problem-solving abilities, setting the stage for a promising future in software development. "
+    },
+    {
+        "position": "Data Annotator",
+        "company": "Quantiphi Analytics Solutions Private Limited",
+        "tenure": "May 2021 - June 2021",
+        "summary": "During my internship, I was engaged in a dynamic role where I collected data from diverse sources, with a particular focus on managing data stored in buckets from GCP. This involved not only gathering the information but also applying effective tagging techniques to organise the necessary data from the unstructured data.
+Furthermore, I was responsible for the crucial task of data cleaning, removing the unnecessary, irrelevant or redundant data.
+This process ensured that we were working with high quality and relevant data sets. One of the most exciting aspects of my internship was my involvement in a sports project.
+This experience allowed me to immerse myself into the field of sports data analytics and data management where timing and accuracy were key parameters.
+This role required me to collaborate seamlessly with the team, honing my communication skills and ensuring that our efforts were synchronised and aligned with the fast paced nature of sports analytics.
+Overall, my internship was an incredibly valuable and enriching experience that significantly enhanced my skills in data collection, organization, and communication."
     }
 ]
