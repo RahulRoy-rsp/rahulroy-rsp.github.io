@@ -1,0 +1,167 @@
+/* About Section */
+.about-section {
+    background: #12192c;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    text-align: center;
+    color: #fff;
+}
+
+.about-section h1 {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    margin: 1rem 0;
+}
+
+.about-section h1 span {
+    color: #B721FF;
+}
+
+#encon {
+    height: 20px;
+    margin-bottom: 1rem;
+}
+
+.about-section h2 {
+    font-weight: 600;
+    color: #B721FF;
+    font-size: 1.5rem;
+}
+
+.about-btns {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.btn {
+    border: none;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    padding: 0.55rem 1rem;
+    font-weight: 600;
+    background: transparent;
+    cursor: pointer;
+    color: #fff;
+    min-width: 130px;
+}
+
+.btn.btn-pink {
+    background: #B721FF;
+    color: #fff;
+    border-color: #B721FF;
+    transition: all 0.5s ease-in-out;
+}
+
+.btn.btn-pink:hover {
+    background: transparent;
+    border-color: #fff;
+    color: #fff;
+}
+
+.about-para p {
+    font-weight: 300;
+    padding: 0.5rem 0;
+    opacity: 1;
+    font-size: 1.1rem;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.spot-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 1rem 0;
+    margin-top: 1rem;
+}
+
+.spot-button {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    width: 50px;
+    height: 50px;
+    text-decoration: none;
+    border-radius: 100%;
+    background: #fff;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.spot-button i {
+    font-size: 1.5rem;
+    color: #2C9819;
+}
+
+.spot-button:hover {
+    transform: scale(1.1);
+}
+
+.btn-hover {
+    width: 160px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    height: 50px;
+    text-align: center;
+    border: none;
+    background-size: 300% 100%;
+    border-radius: 50px;
+    transition: all 0.4s ease-in-out;
+    background-image: linear-gradient(to right, #6253e1, #852D91, #A3A1FF, #ca29b5);
+    box-shadow: 0 4px 15px 0 rgba(126, 52, 161, 0.75);
+}
+
+.btn-hover:hover {
+    background-position: 100% 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-section h1 {
+        font-size: 2.5rem;
+    }
+    
+    .about-section h2 {
+        font-size: 1.2rem;
+    }
+    
+    .about-para p {
+        font-size: 1rem;
+    }
+    
+    .btn {
+        padding: 0.5rem;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-section {
+        padding: 2rem 1rem;
+    }
+    
+    .about-section h1 {
+        font-size: 2rem;
+    }
+    
+    .about-btns {
+        flex-direction: column;
+        align-items: center;
+    }
+}

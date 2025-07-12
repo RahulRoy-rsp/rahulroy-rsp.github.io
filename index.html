@@ -6,14 +6,19 @@
     <title>Rahul Roy | Portfolio</title>
     <meta name="description" content="Professional portfolio of Rahul Roy, Computer Science graduate">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/academics.css">
     <link rel="stylesheet" href="css/work_exp.css">
     <link rel="stylesheet" href="css/projects.css">
     <link rel="stylesheet" href="css/certificates.css">
+    <link rel="stylesheet" href="css/about.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
 </head>
 <body>
     <header>
@@ -44,12 +49,36 @@
             </div>
         </section>
 
-        <section id="about" class="section">
-            <h2>About Me</h2>
-            <div class="about-content">
-                <!-- About content will go here -->
+
+        <section id="about" class="section about-section">
+            <div id="about-me"></div>
+            <h1>Hola<span>!</span></h1>
+            <div id="encon">
+                <h2 id="enchanted"></h2>
             </div>
-        </section>
+            <div class="about-btns">
+                <button type="button" class="btn btn-pink" id="redirectcv">RESUME / CV</button>
+            </div>
+
+            <div class="about-para">
+                <p>My name is Rahul J. Roy. First, I would like to thank you for visiting my Portfolio WebSite.</p>
+                <p>
+                    I am a Computer Science Graduate who enjoys Coding to automate tasks. I'm most comfortable
+                    with Python Language, although I have the knowledge of other programming languages.
+                </p>
+                <p>Sports gives me GOOSEBUMPS, whether I'm playing or Watching.</p>
+                <p>Listening Music is one of my most loved activities. You can find my spotify playlist below</p>
+                <div class="spot-buttons">
+                    <a href="https://spotify.link/iZrAclb64Cb" class="spot-button social-button--spotify" aria-label="Spotify">
+                        <i class="fab fa-spotify"></i>
+                    </a>
+                    <a href="https://spotify.link/xzwVKae64Cb" class="spot-button social-button--spotify" aria-label="Spotify">
+                        <i class="fab fa-spotify"></i>
+                    </a>
+                    <button class="btn-hover color-" id="redirectConn">Connect Me</button>
+                </div>
+            </div>
+        </section>        
 
 
         <section id="experience" class="section">
@@ -75,19 +104,7 @@
             <div class="projects-nav right"><i class="fas fa-chevron-right"></i></div>
         </section>
 
-        <section id="certificates" class="section certificates-section">
-            <h2>My Certifications</h2>
-            <div class="certificates-container" id="certificates-container">
-                <!-- Slides will be added dynamically -->
-            </div>
-            <div class="carousel-nav">
-                <button class="carousel-arrow" id="cert-prev"><i class="fas fa-chevron-left"></i></button>
-                <div class="carousel-dots" id="cert-dots">
-                    <!-- Dots will be added dynamically -->
-                </div>
-                <button class="carousel-arrow" id="cert-next"><i class="fas fa-chevron-right"></i></button>
-            </div>
-        </section>
+
 
         <!-- Other sections would follow the same pattern -->
     </main>
@@ -103,5 +120,6 @@
     </footer>
 
     <script src="js/script.js"></script>
+    
 </body>
 </html>
