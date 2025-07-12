@@ -100,10 +100,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Load projects
     loadProjects();
-
-
     // Initialize navigations
     initProjectNavigation();
+
+    // Load Certificates and initialize navigations
+    loadCertificates().then(() => {
+        // Initialize certificate navigation AFTER certificates are loaded
+        initCertificateNavigation();
+    });
+
     
     // Add intersection observer for animations
     const observerOptions = {
@@ -328,5 +333,100 @@ function initProjectNavigation() {
     });
     
     // Initial check
+    container.dispatchEvent(new Event('scroll'));
+}
+
+// Modified loadCertificates to return a Promise
+function loadCertificates() {
+    return fetch('data/certificates.json')
+        .then(res => {
+            if (!res.ok) throw new Error('Failed to load certificates');
+            return res.json();
+        })
+        .then(data => {
+            renderCertificates(data);
+        })
+        .catch(err => {
+            console.error('Failed to load certificates:', err);
+            // Render fallback data
+            renderCertificates([{
+                name: "Sample Certificate",
+                summary: "This is a sample certificate entry",
+                highlight: ["sample"],
+                link: "#"
+            }]);
+        });
+}
+
+// Improved renderCertificates with better error handling
+function renderCertificates(data) {
+    const container = document.getElementById('certificates-container');
+    
+    if (!container) {
+        console.error('Error: Certificates container not found in DOM');
+        return;
+    }
+    
+    // Clear existing content safely
+    while (container.firstChild) {
+        container.removeChild(container.firstChild);
+    }
+    
+    data.forEach((cert) => {
+        const card = document.createElement('div');
+        card.className = 'certificate-card';
+
+        const highlightedSummary = highlightKeywords(cert.summary, cert.highlight || []);
+
+        card.innerHTML = `
+            <h3>${cert.name}</h3>
+            <p class="certificate-summary">${highlightedSummary}</p>
+            <a href="${cert.link || '#'}" 
+               target="_blank" 
+               class="certificate-link"
+               ${!cert.link ? 'aria-disabled="true"' : ''}>
+                ${cert.link ? 'View Certificate' : 'Unavailable'}
+            </a>
+        `;
+        
+        container.appendChild(card);
+    });
+}
+
+function highlightKeywords(text, keywords) {
+    if (!Array.isArray(keywords)) return text;
+
+    keywords.forEach(word => {
+        const escapedWord = word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        const regex = new RegExp(`\\b(${escapedWord})\\b`, 'gi');
+        text = text.replace(regex, '<span class="highlight">$1</span>');
+    });
+
+    return text;
+}
+
+
+function initCertificateNavigation() {
+    const container = document.getElementById('certificates-container');
+    const leftNav = document.querySelector('.cert-nav.left');
+    const rightNav = document.querySelector('.cert-nav.right');
+
+    if (!container || !leftNav || !rightNav) return;
+
+    leftNav.addEventListener('click', () => {
+        container.scrollBy({ left: -300, behavior: 'smooth' });
+    });
+
+    rightNav.addEventListener('click', () => {
+        container.scrollBy({ left: 300, behavior: 'smooth' });
+    });
+
+    container.addEventListener('scroll', () => {
+        const { scrollLeft, scrollWidth, clientWidth } = container;
+        leftNav.style.display = scrollLeft > 0 ? 'flex' : 'none';
+        rightNav.style.display = scrollLeft < scrollWidth - clientWidth - 1 ? 'flex' : 'none';
+    });
+
+    // Trigger initial state
     container.dispatchEvent(new Event('scroll'));
 }
