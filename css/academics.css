@@ -1,0 +1,128 @@
+/* Modern Timeline */
+.academics-container {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.academics-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3px;
+  background: linear-gradient(to bottom, var(--primary), var(--accent));
+  z-index: 1;
+}
+
+.academic-item {
+  position: relative;
+  width: 46%;
+  padding: 2rem;
+  margin-bottom: 2.5rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  z-index: 2;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+}
+
+.academic-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+.academic-item:nth-child(odd) {
+  margin-right: auto;
+  border-left: 4px solid var(--primary);
+}
+
+.academic-item:nth-child(even) {
+  margin-left: auto;
+  border-right: 4px solid var(--accent);
+}
+
+.academic-item::before {
+  display: none;
+}
+
+.academic-item:nth-child(odd)::before {
+  right: -38px;
+  border-color: var(--primary);
+}
+
+.academic-item:nth-child(even)::before {
+  left: -38px;
+  border-color: var(--accent);
+}
+
+.academic-item h3 {
+  color: var(--dark);
+  margin-bottom: 0.8rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.academic-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 1.2rem;
+  color: var(--gray);
+}
+
+.academic-meta span {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.95rem;
+}
+
+.academic-meta i {
+  color: var(--primary);
+  width: 18px;
+  text-align: center;
+}
+
+.academic-meta .institution {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.academic-meta .duration {
+  color: var(--gray);
+}
+
+.academic-meta .grade {
+  color: var(--success);
+  font-weight: 500;
+}
+
+.academic-summary {
+  margin-top: 1.2rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid rgba(0,0,0,0.08);
+  color: var(--gray);
+  line-height: 1.8;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .academic-item {
+    width: 44%;
+  }
+}
+
+@media (max-width: 576px) {
+  .academic-item {
+    width: calc(100% - 60px);
+    margin-left: 40px !important;
+    padding: 1.5rem;
+  }
+  .academic-item::before {
+    left: -50px !important;
+  } 
+}
