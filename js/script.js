@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Add button event listeners
     document.getElementById('redirectcv').addEventListener('click', () => {
-        window.open('https://drive.google.com/file/d/1Zc4YOHbA60tZA4VBfxj53Lh02ZleTqzR/view?usp=drivesdk', '_blank');
+        window.open('https://drive.google.com/file/d/1Nd8GK_zNRI9DkNidfrA89Hj2BYNAGzZ1/view?usp=drivesdk', '_blank');
     });
 
     document.getElementById('redirectConn').addEventListener('click', () => {
