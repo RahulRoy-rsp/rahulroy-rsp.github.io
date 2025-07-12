@@ -1,32 +1,32 @@
 [
     {
-        "name": "Portfolio Website",
+        "name": "ASMA: A Stock Market Analyser",
         "type": "Personal",
-        "link": "https://example.com/portfolio",
-        "summary": "A responsive portfolio website built with HTML, CSS, and JavaScript. Features dynamic content loading and smooth animations."
+        "link": "https://github.com/RahulRoy-rsp/ASMA-A-Stock-Market-Analyser",
+        "summary": "I developed a Streamlit application using Python to offer users in-depth research of a specific stock. Created an innovative and simple UI to select a stock and performed statistical and predictive analysis. One could view a wide variety of charts like bar charts, pie charts, highlighting the technical analysis of a stock. They could easily download these financial reports too. Also performed sentiment analysis on the tweets of the selected stock and showed sentiments and word clouds. Deployed a machine learning model to show the prediction of the stock prices."
     },
     {
         "name": "Hazel-A-Voice-Based-Virtual-Assistant",
         "type": "Personal",
         "link": "https://github.com/RahulRoy-rsp/Hazel-A-Voice-Based-Virtual-Assistant",
-        "summary": "Full-stack e-commerce solution with React frontend and Node.js backend. Integrated with payment gateways and inventory management."
+        "summary": "A virtual assistant built using Python. I programmed Hazel so the user could play music, search anything with voice commands, search Wikipedia, and get results in the browser and audibly. It can tweet from the user's Twitter account, send emails, open social media sites, and play music online and offline. Google Translate was also embedded to translate phrases or keywords between languages."
     },
     {
-        "name": "Task Management App",
+        "name": "FILTERAM",
         "type": "Personal",
-        "link": "",
-        "summary": "A productivity app for managing daily tasks with drag-and-drop functionality and team collaboration features."
+        "link": "https://github.com/RahulRoy-rsp/ShortProject_Filteram",
+        "summary": "An image processing app built using Streamlit that shows a wide range of filters applied to the user's input image. The app allows image upload, filter applications, transformations, contrast adjustments, histogram equalization, and more. Users can visualize effects and compare multiple modified versions. It provides a user-friendly interface and allows users to save modified images locally. Skills Used: Python, Image Processing, Streamlit."
     },
     {
-        "name": "Weather Dashboard",
+        "name": "Zupee: Trump Cards Mania Analysis",
         "type": "Personal",
-        "link": "https://example.com/weather",
-        "summary": "Real-time weather application using API integration with 5-day forecasts and location-based services."
+        "link": "https://github.com/RahulRoy-rsp/ZupeeTrumpCardsMania",
+        "summary": "Zupee Trump Card Mania is an online cricket card game. I created a notebook that provides a smart approach for players. It gives insights and strategies for selecting captains, vice-captains, and making optimal card selections during 1v1 competitions."
     },
     {
-        "name": "CRM System",
+        "name": "Savola",
         "type": "Work",
-        "link": "https://example.com/crm",
-        "summary": "Customer relationship management system with analytics dashboard and automated reporting features."
+        "link": "",
+        "summary": "SnowFlake"
     }
 ]
