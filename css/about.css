@@ -1,6 +1,13 @@
 /* About Section */
 .about-section {
     background: #12192c;
+    width: 100vw; /* Ensures it takes full screen width */
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -10,6 +17,7 @@
     text-align: center;
     color: #fff;
 }
+
 
 .about-section h1 {
     font-size: 3.5rem;
