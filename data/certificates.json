@@ -1,26 +1,44 @@
 [
     {
-        "name": "AWS Certified Solutions Architect",
-        "summary": "Demonstrated ability to design and deploy scalable systems on AWS. Highlighted skills include cloud architecture, security, and cost optimization.",
-        "link": "https://example.com/certificates/aws",
-        "highlight": ["cloud architecture", "security", "cost optimization"]
+        "name": "Microsoft Power BI",
+        "summary": "Learned to use Power BI to create visually stunning reports and dashboards. Gained skills in connecting multiple data sources, creating advanced DAX measures, and applying various visualization techniques for impactful data storytelling.",
+        "link": "https://www.udemy.com/certificate/UC-2641d7f4-af67-49fb-b366-74f63e5b8905/",
+        "highlight": ["Power BI", "DAX", "data visualization", "dashboards"]
     },
     {
-        "name": "Google Data Analytics Professional",
-        "summary": "Earned credential for data cleaning, analysis, and visualization using tools like SQL, R, and Tableau. Special focus on data-driven decision making.",
-        "link": "https://example.com/certificates/google-data",
-        "highlight": ["data cleaning", "analysis", "visualization", "data-driven"]
+        "name": "Python Basic (HackerRank)",
+        "summary": "Completed a HackerRank skills test that involved solving real-world problems using Python under timed conditions. This experience strengthened my programming and problem-solving skills.",
+        "link": "https://www.hackerrank.com/certificates/1bca73681eb3",
+        "highlight": ["Python", "problem-solving", "algorithms"]
     },
     {
-        "name": "Microsoft Certified: Azure Administrator",
-        "summary": "Validated skills in implementing, managing, and monitoring Azure environments. Key competencies include virtual networking and identity management.",
-        "link": "https://example.com/certificates/azure",
-        "highlight": ["virtual networking", "identity management"]
+        "name": "SQL (Basic)",
+        "summary": "Passed a HackerRank SQL assessment involving practical database queries and data manipulation problems. Demonstrated proficiency in managing and querying databases.",
+        "link": "https://www.hackerrank.com/certificates/3f5df5e03349",
+        "highlight": ["SQL", "data manipulation", "database queries"]
     },
     {
-        "name": "Certified Scrum Master",
-        "summary": "Proven understanding of Scrum methodologies and agile project management. Focus areas include sprint planning and team collaboration.",
-        "link": "",
-        "highlight": ["Scrum methodologies", "agile", "sprint planning"]
+        "name": "The Complete Web Developer Course 2.0",
+        "summary": "Mastered the fundamentals of web development using HTML5, CSS, JavaScript, PHP, Python, and MySQL. Gained hands-on experience building blogs and eCommerce websites using WordPress.",
+        "link": "https://drive.google.com/file/d/10PO1B6TkKDtfESqEn-5ibgyRwSWdgRDk/view",
+        "highlight": ["HTML", "CSS", "JavaScript", "PHP", "MySQL", "WordPress"]
+    },
+    {
+        "name": "Cyber Security",
+        "summary": "Explored core concepts of cyber security and networking. Used Packet Tracer to understand network configuration and gained insight into cyber threats and protection strategies.",
+        "link": "https://drive.google.com/file/d/1nJwXO83NckIVpc-iAlKf9LCBsRRBIsu8/view",
+        "highlight": ["Cyber Security", "networking", "Packet Tracer", "threat protection"]
+    },
+    {
+        "name": "Ultimate Python Bootcamp For Data Science & Machine Learning",
+        "summary": "Focused on data analysis using Pandas, learning to handle large datasets efficiently. Covered data preparation, cleaning, and transformation techniques essential for AI and ML applications.",
+        "link": "https://www.udemy.com/certificate/UC-b59d5cb6-3f11-4a18-97f0-654fa9b859f5/",
+        "highlight": ["Python", "Pandas", "data analysis", "machine learning"]
+    },
+    {
+        "name": "JavaScript, Bootstrap & PHP",
+        "summary": "Acquired full-stack web development skills, combining JavaScript and Bootstrap for frontend with PHP and MySQL for backend. Developed responsive and interactive data-driven web applications.",
+        "link": "https://www.udemy.com/certificate/UC-ba8be27f-b10a-4c78-b401-fcfb535d324e/",
+        "highlight": ["JavaScript", "Bootstrap", "PHP", "MySQL", "web development"]
     }
 ]
