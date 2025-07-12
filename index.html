@@ -29,7 +29,7 @@
 <body>
     <header>
         <nav>
-            <a href="#" class="logo">Rahul Roy</a>
+            <a href="#" class="logo"><span id="typed-logo"></span></a>
             <div class="menu-toggle">
                 <span></span>
                 <span></span>
@@ -126,6 +126,19 @@
     </footer>
 
     <script src="js/script.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            new Typed('#typed-logo', {
+            strings: ['Roy Software Programmer', 'Data Engineer'],
+            typeSpeed: 100,
+            backSpeed: 30,
+            showCursor: true,
+            loop: true,
+            });
+        });
+    </script>
+
     
 </body>
 </html>

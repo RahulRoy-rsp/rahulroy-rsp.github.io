@@ -46,11 +46,36 @@ nav {
 }
 
 .logo {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: white;
+  display: block; /* <-- Add this */
+  font-size: 1.2rem;
+  /* font-weight: 700; */
   text-decoration: none;
+  background: none !important;
+  color: transparent !important; /* <-- Force override */
 }
+
+
+.logo span#typed-logo {
+  background: linear-gradient(90deg, #d428c8, #e6f238, #00ffea);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  font-weight: 650;
+  font-size: 1.4rem;
+  display: inline-block;
+  white-space: nowrap;
+  animation: shine 3s linear infinite;
+}
+
+
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
+
 
 nav ul {
   display: flex;
@@ -233,6 +258,17 @@ footer p {
 }
 
 @media (max-width: 576px) {
+  .logo {
+    max-width: 90%;  /* Limit width so it doesn’t fight with hamburger */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .logo span#typed-logo {
+    font-size: 1.3rem;
+  }
+
   nav ul {
     flex-direction: column;
     gap: 0.5rem;
@@ -250,5 +286,11 @@ footer p {
   
   .section h2 {
     font-size: 1.8rem;
+  }
+}
+
+@supports not (-webkit-background-clip: text) {
+  .logo span#typed-logo {
+    color: var(--primary);
   }
 }
