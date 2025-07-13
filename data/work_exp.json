@@ -3,19 +3,19 @@
         "position": "Data Engineer",
         "company": "Go Digital Technology Consulting LLP",
         "tenure": "May 2025 - Present",
-        "summary": "to fill"
+        "summary": "Led the design and implementation of scalable data architectures by reverse-engineering XML schemas into Python-based mapping frameworks, reducing onboarding time by 40%. Engineered high-performance Spark+Kafka CDC pipelines to migrate on-prem data to S3 using AWS Glue, achieving a 40% reduction in latency and 99.5% system uptime. Pioneered spatial data ETL using Apache Sedona and PySpark, cutting PostgreSQL spatial join times from 24+ hours to under an hour. Automated incremental CDC using PostgreSQL triggers and AWS Lambda, reducing compute costs by 60%. Replaced legacy FME processes with PySpark workflows, achieving 20x spatial processing speedup. Spearheaded reusable PySpark frameworks with JSON-based configuration, improving development efficiency and reducing boilerplate code by 70%. Developed async workflows using asyncio and asyncpg, boosting pipeline reliability by 30%. Trained offshore teams and documented full-stack data flows, enabling autonomous pipeline ownership. Contributed to talent acquisition with AI-powered resume screening prompts to enhance hiring outcomes."
     },
     {
         "position": "Associate Data Engineer",
         "company": "Go Digital Technology Consulting LLP",
         "tenure": "December 2023 - April 2025",
-        "summary": "to fill"
+        "summary": "Redesigned legacy Informatica ETL workflows into modular AWS Glue jobs using PySpark, cutting execution time by 30% through optimized partitioning strategies. Implemented Apache Hudi tables for ACID-compliant incremental loading, reducing latency by 50%. Automated deployment pipelines using Terraform and managed secrets through HashiCorp Vault, slashing deployment time by 60%. Developed serverless solutions with AWS Lambda to trigger Glue pipelines, significantly reducing operational overhead. Engineered cross-database data flows by building Python scripts for S3-to-PostgreSQL RDS upserts, delivering near real-time synchronization with 95% efficiency. Mentored incoming interns and contributed to recruitment by creating HackerRank assessments tailored to data engineering skills. Delivered complex Snowflake SQL for executive dashboards, enhancing data accessibility and reducing refresh times by 25%. Automated Ascend.io pipeline monitoring scripts in Python, improving issue detection and minimizing manual intervention. Designed relational schemas with QuickDBD and implemented MERGE strategies in Snowflake, ensuring 99.8% historical data consistency. Secured enterprise data flows by automating SFTP transfers for Oracle Fusion reports in compliance with corporate governance."
     },
     {
         "position": "Data Engineer Intern",
         "company": "Go Digital Technology Consulting LLP",
         "tenure": "October 2023 - December 2023",
-        "summary": "to fill"
+        "summary": "Demonstrated strong performance in SQL, Python (Pandas), and data modeling, earning a full-time offer within two months. Contributed to Snowflake-based analytics by restructuring data models, resulting in a 20% reduction in query latency. Built and optimized ETL pipelines to automate manual data workflows, improving data freshness and reducing processing time by 35%. Created BI dashboards in Oracle Fusion to visualize supply chain KPIs, supporting executive decision-making. Worked closely with cross-functional teams to maintain data quality across extraction (APIs, databases), transformation (Snowflake), and reporting (Power BI), ensuring end-to-end data integrity and operational transparency."
     },
     {
         "position": "Python Intern",
